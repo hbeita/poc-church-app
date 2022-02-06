@@ -8,5 +8,9 @@ Style/Documentation:
     
 Layout/LineLength:
   Max: 198
+  
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*spec.rb'
 
     
