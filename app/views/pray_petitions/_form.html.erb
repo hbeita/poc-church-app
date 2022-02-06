@@ -1,4 +1,4 @@
-<%= form_with(model: pray_petition) do |form| %>
+<%= form_with(model: pray_petition, html: { style: 'text-align: center;'}) do |form| %>
   <% if pray_petition.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(pray_petition.errors.count, "error") %> prohibited this pray_petition from being saved:</h2>
