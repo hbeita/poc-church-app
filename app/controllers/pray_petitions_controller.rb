@@ -59,6 +59,7 @@ class PrayPetitionsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_pray_petition
     @pray_petition = PrayPetition.find(params[:id])
