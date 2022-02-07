@@ -1,0 +1,53 @@
+/* T H A N K     Y O U */
+.thank-you-btn {
+  background: #3a6998;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 5px;
+  color: white!important;
+  margin-top: 20px;
+}
+
+.thank-you-logo{
+  width: 15%;
+}
+.thank-you-header{
+  font-family: open sans,Arial,Helvetica Neue,sans-serif;
+  width: 100%;
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.thank-you-bg{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(316deg, #4276cc, #8842cc, #31bf81);
+  background-size: 600% 600%;
+  -webkit-animation: thank-you 32s ease infinite;
+  -moz-animation: thank-you 32s ease infinite;
+  animation: thank-you 32s ease infinite;
+  color: #dfdfdf;
+  padding-top: 5%;
+}
+
+@-webkit-keyframes thank-you {
+  0%{background-position:18% 0%}
+  50%{background-position:83% 100%}
+  100%{background-position:18% 0%}
+}
+@-moz-keyframes thank-you {
+  0%{background-position:18% 0%}
+  50%{background-position:83% 100%}
+  100%{background-position:18% 0%}
+}
+@keyframes thank-you {
+  0%{background-position:18% 0%}
+  50%{background-position:83% 100%}
+  100%{background-position:18% 0%}
+}
+/* T H A N K     Y O U    E N D */

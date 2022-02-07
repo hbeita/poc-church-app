@@ -1,5 +1,6 @@
-<div style="text-align: center; top: 20%; position: relative">
-  <h4>Gracias por enviar tu petición, estaremos orando por ti.</h4>
+<div class="thank-you-bg">
+  <%= image_tag 'LogoLettersWhite.png', class: "thank-you-logo" %>
+  <h4 class="thank-you-header">Gracias por enviar tu petición. <br>Estaremos orando por ti.</h4>
   <div>
    <p>
     <i>
@@ -10,7 +11,6 @@
    <br>
    <sub>Filipenses 4:6-7</sub>
    </p>
-   <hr>
   </div>
   <%= link_to "Enviar otra petición", new_pray_petition_path, class: "thank-you-btn" %>
 </div>
