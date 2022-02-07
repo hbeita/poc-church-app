@@ -26,7 +26,7 @@ class PrayPetitionsController < ApplicationController
 
     respond_to do |format|
       if @pray_petition.save
-        format.html { redirect_to pray_petition_url(@pray_petition), notice: 'Pray petition was successfully created.' }
+        format.html { redirect_to :gracias_por_tu_peticion }
         format.json { render :show, status: :created, location: @pray_petition }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class PrayPetitionsController < ApplicationController
   def update
     respond_to do |format|
       if @pray_petition.update(pray_petition_params)
-        format.html { redirect_to pray_petition_url(@pray_petition), notice: 'Pray petition was successfully updated.' }
+        format.html { redirect_to :gracias_por_tu_peticion }
         format.json { render :show, status: :ok, location: @pray_petition }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -56,6 +56,10 @@ class PrayPetitionsController < ApplicationController
       format.html { redirect_to pray_petitions_url, notice: 'Pray petition was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def thank_you
+    render 'thank_you'
   end
 
   private

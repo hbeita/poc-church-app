@@ -23,8 +23,12 @@
 
   <div>
     <%= form.label 'Petición de oración', style: "display: block" %>
-    <%= form.text_field :pray_for %>
+    <%= form.text_area(:pray_for, size: '20x6', style: "width: 60%") %>
   </div>
+  <sub>
+    Tu privacidad es importante paran nosotros. <br>
+    No compartiremos tu informaci&oacuten con nadie.
+  </sub>
 
   <div>
     <%= form.submit 'Enviar Petición' %>

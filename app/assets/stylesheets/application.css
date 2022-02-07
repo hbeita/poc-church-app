@@ -13,7 +13,17 @@
  *= require_tree .
  *= require_self
  */
- .footer-heart{text-align:center;font-family: open sans, sans-serif;}
+ 
+ .thank-you-btn {
+  background: #3a6998;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 5px;
+  color: white!important;
+  margin-top: 20px;
+}
+
+.footer-heart{text-align:center;font-family: open sans, sans-serif;}
 
 .footer-heart a{border-bottom: 1px solid #453886;color: #453886;padding-bottom: .25em; text-decoration: none;}
 
