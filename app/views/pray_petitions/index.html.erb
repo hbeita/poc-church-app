@@ -8,8 +8,11 @@
   <div class="row mb-2">
     <div class="col-4">
       <%= link_to new_pray_petition_path, class: 'btn btn-success' do %>
-        Nueva Peticion
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+          <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+        </svg> Nueva Peticion
       <% end %>
+
     </div>
   </div>
   <br/>
@@ -21,7 +24,12 @@
             <h5 class="card-title"><%= pray_petition.name %></h5>
             <p class="card-text"><%= pray_petition.pray_for %></p>
             <%= form_with(model: pray_petition, url: pray_petition_finished_path(pray_petition), method: :post) do |form| %>
-              <%= form.submit 'Ora', class: "btn btn-secondary" %>
+              <%= form.button(type: 'submit', class: "btn btn-sm btn-secondary") do %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                </svg>  Leída
+              <% end %>
             <% end %>
           </div>
         </div>
