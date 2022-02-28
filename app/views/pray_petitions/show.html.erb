@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
 
-<%= render @pray_petition %>
+  <%= render @pray_petition %>
 
-<div>
-  <%= link_to "Edit this pray petition", edit_pray_petition_path(@pray_petition) %> |
-  <%= link_to "Back to pray petitions", pray_petitions_path %>
+  <div>
+    <%= link_to "Edit this pray petition", edit_pray_petition_path(@pray_petition) %> |
+    <%= link_to "Back to pray petitions", pray_petitions_path %>
 
-  <%= button_to "Destroy this pray petition", @pray_petition, method: :delete %>
+    <%= button_to "Destroy this pray petition", @pray_petition, method: :delete %>
+  </div>
 </div>

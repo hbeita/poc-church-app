@@ -1,14 +1,31 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Pray petitions</h1>
-
-<div id="pray_petitions">
-  <% @pray_petitions.each do |pray_petition| %>
-    <%= render pray_petition %>
-    <p>
-      <%= link_to "Show this pray petition", pray_petition %>
-    </p>
-  <% end %>
+<%= render 'shared/nav_bar' %>
+<div class="row justify-content-md-center">
+  <p style="color: green"><%= notice %></p>
+<div>
 </div>
+  <h3>Peticiones de oracion</h3>
 
-<%= link_to "New pray petition", new_pray_petition_path %>
+  <div class="row mb-2">
+    <div class="col-4">
+      <%= link_to new_pray_petition_path, class: 'btn btn-success' do %>
+        Nueva Peticion
+      <% end %>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <% @pray_petitions.each do |pray_petition| %>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= pray_petition.name %></h5>
+            <p class="card-text"><%= pray_petition.pray_for %></p>
+            <%= form_with(model: pray_petition, url: pray_petition_finished_path(pray_petition), method: :post) do |form| %>
+              <%= form.submit 'Ora', class: "btn btn-secondary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

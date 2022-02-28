@@ -1,7 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :pray_petitions
+  devise_for :users
+
+  resources :pray_petitions do
+    post '/finished', to: "pray_petitions#finished"
+  end
+
+  namespace :admin do
+  end
 
   root 'pray_petitions#new'
 

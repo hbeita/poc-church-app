@@ -1,16 +1,15 @@
-<div class="thank-you-bg">
-  <%= image_tag 'LogoLettersWhite.png', class: "thank-you-logo" %>
-  <h4 class="thank-you-header">Gracias por enviar tu petición. <br>Estaremos orando por ti.</h4>
+<div class="row">
+  <h4>Gracias por enviar tu petición. <br>Estaremos orando por ti.</h4>
   <div>
    <p style="font-size: 1em;">
     <i>
     Por nada estén afanosos; más bien, presenten sus peticiones delante de Dios en toda oración y ruego,<br>
-    con acción de gracias. 
+    con acción de gracias.
     <br> Y la paz de Dios, que sobrepasa todo entendimiento, guardará sus corazones y sus mentes en Cristo Jesús
    </i>
    <br>
    <sub>Filipenses 4:6-7</sub>
    </p>
   </div>
-  <%= link_to "Enviar otra petición", new_pray_petition_path, class: "thank-you-btn" %>
 </div>
+<%= link_to "Enviar otra petición", new_pray_petition_path, class: "btn btn-primary" %>
