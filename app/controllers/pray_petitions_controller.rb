@@ -59,7 +59,11 @@ class PrayPetitionsController < ApplicationController
   end
 
   def thank_you
-    render 'thank_you'
+    if current_user.present?
+      redirect_to pray_petitions_url, notice: 'Peticion agregada.'
+    else
+      render 'thank_you'
+    end
   end
 
   def finished

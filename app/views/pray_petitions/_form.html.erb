@@ -44,7 +44,12 @@
 
       <div class="row">
         <div class="col-sm-12 col-md-8">
-          <%= form.submit 'Enviar Petición', class: "btn btn-success" %>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <%= form.submit 'Enviar Petición', class: "btn btn-success" %>
+            <% if current_user.present? %>
+              <%= link_to 'Regresar', pray_petitions_path, type: 'button', class: "btn btn-link" %>
+            <% end %>
+          </div>
         </div>
       </div>
     <% end %>
