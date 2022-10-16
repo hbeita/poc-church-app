@@ -21,14 +21,23 @@
       <div class="col-sm-12 col-md-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><%= pray_petition.name %></h5>
-            <p class="card-text"><%= pray_petition.pray_for %></p>
+            <h4 class="card-title"><%= pray_petition.name %></h4>
+            <div class="strong"><strong>Fecha: </strong><%= pray_petition.created_at.strftime('%d-%b-%Y') %></div>
+            <div class="card-text italic">
+              <div class="strong"><strong>Teléfono: </strong><%= pray_petition.phone_number %></div>
+            </div>
+            <div class="card-text">
+              <div class="strong">
+                <strong>Petición:</strong>
+                <p class="font-italic"><%= pray_petition.pray_for %></p>
+              </div>
+            </div>
             <%= form_with(model: pray_petition, url: pray_petition_finished_path(pray_petition), method: :post) do |form| %>
               <%= form.button(type: 'submit', class: "btn btn-sm btn-secondary") do %>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                   <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
                   <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
-                </svg>  Leída
+                </svg>  Lista
               <% end %>
             <% end %>
           </div>
